@@ -82,11 +82,10 @@ public class ControlWork {
 
 
         public static void sortGroupSurname(String nameOfGroup){
-        ArrayList<Student> listOfGroup= new ArrayList<>();
+
         ArrayList<String> surnames = new ArrayList<>();
         for (Student student :students) {
             if (student.getGroup().equals(nameOfGroup)) {
-                listOfGroup.add(student);
                 surnames.add(student.getSurname());
             }
         }
@@ -94,7 +93,7 @@ public class ControlWork {
             Collections.sort(surnames);
 
 
-            for(String string: surnames){
+        for(String string: surnames){
                 for(Student student : students)
                     if (string.equals(student.getSurname()))
                         System.out.println(student.getName()+ " "+ student.getSurname()+" " + student.getMark() );
